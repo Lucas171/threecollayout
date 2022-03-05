@@ -1,0 +1,160 @@
+/* 
+Colors
+Primary
+Bright orange: hsl(31, 77%, 52%) Dark cyan: hsl(184, 100%, 22%) Very dark cyan: hsl(179, 100%, 13%)
+
+Neutral
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75) Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+
+Typography
+Body Copy
+Font size: 15px
+Font
+Family: Lexend Deca
+
+Weights: 400
+
+Family: Big Shoulders Display
+
+Weights: 700
+
+
+
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+
+
+*/
+
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+  --xxs: 0.4rem;
+  --xs: 0.8rem;
+  --sm: 1.6rem;
+  --md: 2.4rem;
+  --lg: 3.2rem;
+  --xl: 4rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+}
+.cards {
+  margin-top: 88px;
+}
+.card {
+  width: 327px;
+  height: auto;
+  margin: auto;
+  padding: var(--xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--md);
+}
+
+.card:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.cards .card:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+.card img {
+  width: 62px;
+}
+.card-header {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: var(--xl);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card-text,
+.card-btn {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.card-text {
+  line-height: var(--lg);
+  font-size: var(--sm);
+  color: var(--transparent);
+}
+
+.card-btn {
+  width: 60%;
+  padding: var(--sm) var(--lg);
+  border-radius: 50px;
+  border: 1px solid white;
+
+  transition: background-color 0.3s;
+}
+.card-btn:hover {
+  color: white;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.card-orange,
+.card-blue,
+.card-dark-blue {
+  color: white;
+}
+
+.card-orange {
+  background-color: var(--orange);
+}
+.card-btn-orange {
+  color: var(--orange);
+}
+.card-blue {
+  background-color: var(--Dark-cyan);
+}
+.card-btn-blue {
+  color: var(--Dark-cyan);
+}
+.card-dark-blue {
+  background-color: var(--Very-dark-cyan);
+}
+.card-btn-dark-blue {
+  color: var(--Very-dark-cyan);
+}
+
+@media (min-width: 62.5em) {
+  .cards {
+    display: flex;
+    width: 919px;
+    margin: 171px auto;
+  }
+
+  .card:first-child {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .cards .card:last-child {
+    border-radius: 0 10px 10px 0;
+  }
+
+  .card {
+    width: auto;
+    padding: 4.5rem;
+  }
+
+  .card-btn {
+    width: 70%;
+    margin-top: var(--xl);
+  }
+}
